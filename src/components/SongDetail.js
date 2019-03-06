@@ -12,6 +12,7 @@ class SongDetail extends React.Component {
     }
     return (
       <div>
+        <h1>Details</h1>
         <h4>{this.props.selectedSong.title}</h4>
         <p>{this.props.selectedSong.artist}</p>
       </div>
