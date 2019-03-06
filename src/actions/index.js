@@ -1,6 +1,6 @@
-export function selectSong(song) {
+export function selectedSong(song) {
   return {
-    type: "SELECT_SONG",
+    type: "SELECTED_SONG",
     payload: song
   };
 }
