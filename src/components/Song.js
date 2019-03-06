@@ -5,7 +5,6 @@ import { selectedSong } from "../actions";
 class Song extends React.Component {
   onSongSelect = () => {
     this.props.selectedSong(this.props.song);
-    console.log(this.props.song);
   };
 
   render() {
@@ -29,13 +28,7 @@ class Song extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    selectedSong: state.selectedSong
-  };
-};
-
 export default connect(
-  mapStateToProps,
+  null,
   { selectedSong }
 )(Song);
