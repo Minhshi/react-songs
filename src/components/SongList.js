@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux"
 
 class SongList extends React.Component {
   render() {
@@ -6,4 +7,4 @@ class SongList extends React.Component {
   }
 }
 
-export default SongList;
+export default connect()(SongList);
