@@ -1,4 +1,6 @@
-export function songsReducer() {
+import { combineReducers } from "redux";
+
+const songsReducer = () => {
   return [
     {
       title: "Gib Ihm",
@@ -41,12 +43,17 @@ export function songsReducer() {
       artist: "Ariana Grande"
     }
   ];
-}
+};
 
-export function selectedSongReducer(selectSong = null, action) {
+const selectedSongReducer = (selectSong = null, action) => {
   if (action.type === "SELECTED_SONG") {
     return action.payload;
   }
 
   return selectedSong;
-}
+};
+
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong: selectedSongReducer
+});
